@@ -1,0 +1,44 @@
+{
+  "name": "charades-movie",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Charades version for movies microservice",
+
+  "author": {
+    "name": "Retruc Labs",
+    "email": "admin@retruclabs.com",
+    "url": "http://retruclabs.com"
+  },
+
+  "homepage": "http://www.retruclabs.com/",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RetrucLabs/charades-movie"
+  },
+
+  "main": "server.js",
+
+  "dependencies": {
+    "express" : "4.x.x",
+    "morgan": "1.x.x",
+    "body-parser": "1.x.x",
+    "cookie-parser": "1.x.x",
+    "method-override": "2.x.x",
+    "winston": "2.x.x"
+  },
+
+  "devDependencies": {
+    "should": "4.6.x",
+    "chai": "3.3.0",
+    "chai-as-promised": "5.1.0",
+    "mocha": "2.3.3",
+    "sinon": "1.17.1",
+    "sinon-chai": "2.8.0",
+    "supertest": "1.1.0"
+  },
+
+  "scripts": {
+    "test": "mocha"
+  }
+}
