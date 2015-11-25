@@ -36,7 +36,7 @@ server.terminatorHandler = function(signal){
 
 //  Process on exit and signals.
 server.setupTerminationHandlers = function(){
-  process.on('exit', function() { server.terminatorHandler(); });
+  process.on('exit', server.terminatorHandler);
   var termSignals = ['SIGHUP', 'SIGINT', 'SIGQUIT', 'SIGILL', 'SIGTRAP', 'SIGABRT', 'SIGBUS', 'SIGFPE', 'SIGUSR1',
   'SIGSEGV', 'SIGUSR2', 'SIGTERM'];
   termSignals.forEach(function(element) {
