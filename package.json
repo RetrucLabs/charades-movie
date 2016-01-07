@@ -17,7 +17,7 @@
     "url": "https://github.com/RetrucLabs/charades-movie"
   },
 
-  "main": "server.js",
+  "main": "service.js",
 
   "dependencies": {
     "express" : "4.x.x",
@@ -39,6 +39,7 @@
   },
 
   "scripts": {
+    "start": "node service.js",
     "test": "mocha"
   }
 }

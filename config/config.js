@@ -5,5 +5,7 @@ module.exports = {
     ip: process.env.IP || '0.0.0.0',
   },
 
+  logFilePath: (process.env.HOME || process.env.USERPROFILE) + '/node-logs.log',
+
   currentTimeZone: 'Europe/Madrid'
 };

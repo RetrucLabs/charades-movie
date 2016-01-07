@@ -1,5 +1,5 @@
 
-const logger        = require('winston');
+const logger        = require('../lib/logger');
 
 module.exports = function(express) {
   express.get('/', getRoot);

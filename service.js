@@ -5,6 +5,7 @@ var bodyParser      = require('body-parser');
 var cookieParser    = require('cookie-parser');
 var methodOverride  = require('method-override');
 var morgan          = require('morgan');
+var logger          = require('./lib/logger');
 var config          = require('./config/config');
 
 var server = module.exports = this;
@@ -19,7 +20,7 @@ server.setExpressApp = function(){
   server.express.use(bodyParser.json());       // get information from html forms
   server.express.use(methodOverride());        // simulate DELETE and PUT
   server.express.use(cookieParser());          // read cookies (needed for auth)
-  server.express.use(morgan('dev'));
+  server.express.use(morgan('tiny', { 'stream': logger.stream }));
 };
 
 server.setRoutes = function(){
