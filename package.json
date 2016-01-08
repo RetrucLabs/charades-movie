@@ -25,7 +25,9 @@
     "body-parser": "1.x.x",
     "cookie-parser": "1.x.x",
     "method-override": "2.x.x",
-    "winston": "2.x.x"
+    "winston": "2.x.x",
+    "underscore": "1.x.x",
+    "validator": "4.x.x"
   },
 
   "devDependencies": {
