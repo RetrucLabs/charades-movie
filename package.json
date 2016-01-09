@@ -33,7 +33,8 @@
     "should": "4.6.x",
     "sinon": "1.17.1",
     "sinon-chai": "2.8.0",
-    "supertest": "1.1.0"
+    "supertest": "1.1.0",
+    "istanbul": "0.x.x"
   },
   "scripts": {
     "start": "node service.js",
