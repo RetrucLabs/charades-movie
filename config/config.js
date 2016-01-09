@@ -7,5 +7,7 @@ module.exports = {
 
   logFilePath: (process.env.HOME || process.env.USERPROFILE) + '/node-logs.log',
 
-  currentTimeZone: 'Europe/Madrid'
+  currentTimeZone: 'Europe/Madrid',
+
+  filmsListDefaultLength: 5
 };

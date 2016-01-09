@@ -2,6 +2,7 @@
 const logger        = require('../lib/logger');
 const _             = require('underscore');
 const validator     = require('validator');
+const config        = require('../config/config');
 
 module.exports = (express) => {
   express.get('/', getRoot);
@@ -16,7 +17,7 @@ function getRoot(req, res) {
 function getFilmsList(req, res) {
   var outputLength = req.query.ol;
   if(outputLength && !validator.isNumeric(req.query.ol)) return res.status(400).send('Invalid param');
-  if(!outputLength) outputLength = 5;
+  if(!outputLength) outputLength = config.filmsListDefaultLength;
   var films = _.shuffle(require('../lib/films.json'));
   if(films.length > outputLength) films = films.splice(0, outputLength);
   res.status(200).json(films);
