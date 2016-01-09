@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/RetrucLabs/charades-movie.svg?branch=master)](https://travis-ci.org/RetrucLabs/charades-movie)
+[![Coverage Status](https://coveralls.io/repos/RetrucLabs/charades-movie/badge.svg?branch=master&service=github)](https://coveralls.io/github/RetrucLabs/charades-movie?branch=master)
 
 RetrucLabs/charades-movie
 ==============
