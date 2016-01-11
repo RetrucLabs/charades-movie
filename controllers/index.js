@@ -16,7 +16,8 @@ function getRoot(req, res) {
 
 function getFilmsList(req, res) {
   var films = _.shuffle(require('../lib/films.json')[res.locals.lang]);
-  if(films.length > res.locals.outputLength) films = films.splice(0, res.locals.outputLength);
+  if(films.length < res.locals.outputLength) return res.status(400).send('Invalid param');
+  films = films.splice(0, res.locals.outputLength);
   res.status(200).json(films);
 }
 
