@@ -7,6 +7,7 @@ const config        = require('../config/config');
 module.exports = (express) => {
   express.get('/', getRoot);
   express.get('/films', preloadFilmsListParams, getFilmsList);
+  express.get('/description', getDescription);
 };
 
 function getRoot(req, res) {
@@ -19,6 +20,17 @@ function getFilmsList(req, res) {
   if(films.length < res.locals.outputLength) return res.status(400).send('Invalid param');
   films = films.splice(0, res.locals.outputLength);
   res.status(200).json(films);
+}
+
+function getDescription(req, res) {
+  res.status(200).json({
+    'name':'Movie Charades',
+    'languages':[
+      { 'name': 'English', 'code': 'en' },
+      { 'name': 'Español', 'code': 'es' },
+    ],
+    'game-turn-data': 'films'
+  });
 }
 
 
